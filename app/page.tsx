@@ -14,7 +14,7 @@ const page = () => {
           {people.map((person) => {
             const { id, name, age, image } = person;
             return (
-              <article key={id} className="grid-cols-1 divide-y flex ">
+              <article key={id} className="grid-cols-1 divide-y flex m-2 ">
                 <Image
                 width={500}
                 height={500}
@@ -23,7 +23,7 @@ const page = () => {
                   alt={name}
                   className="w-20 h-20 bg-cover rounded-full"
                 />
-                <div>
+                <div className="ml-10 flex flex-col items-center justify-center">
                   <h1 className="text-xl">{name}</h1>
                   <p className="text-sm">{age} Years</p>
                 </div>
@@ -31,8 +31,8 @@ const page = () => {
             );
           })}
         </div>
-        <div className=" relative border m-10 bg-pink-500 text-white flex justify-center text-xl p-3 rounded-xl cursor-pointer">
-          <button className="" onClick={() => setPeople([])}>
+        <div className=" hover:scale-105 transition ease-in-out relative border m-10 bg-pink-500 text-white flex justify-center text-xl p-3 rounded-xl cursor-pointer">
+          <button className='' onClick={() => setPeople([])}>
             Clear All
           </button>
         </div>
